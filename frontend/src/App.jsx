@@ -1,5 +1,5 @@
-import React from "react"
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom"
+import react from "react"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Home from "./pages/Home"
@@ -20,17 +20,17 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route 
-          path="/" 
+        <Route
+          path="/"
           element={
             <ProtectedRoute>
               <Home />
             </ProtectedRoute>
-        } 
+          }
         />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Logout" element={<Logout />} />
-        <Route path="/Register" element={<RegisterAndLogout />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/register" element={<RegisterAndLogout />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
